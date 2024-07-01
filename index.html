@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+</head>
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">Lena Ray</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">Lena Ray</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            </div>
+        </div>
+    </nav>
+    <section id="profile">
+        <div class="profile-container">
+            <div class="section__text">
+                <h1 class="title">Lena Ray</h1>
+                <p class="section__text__p2">Computer Science Major @UC Davis</p>
+                <div class="text-container">
+                    <p>Hello! I’m a current student at UC Davis, <span class="highlight">SWE intern at Blackrock</span>, and former SWE intern for <span class="highlight">Paramount+</span>. I have a keen interest in machine learning and its applications in fintech, as well as a passion for computational biology. I’m involved with undergraduate research at UC Davis, where I’m creating an augmented reality device to assist individuals with autism in facilitating communication. I’m excited to work on impactful projects that push the boundaries of technology!</p>
+                </div>
+                                <div class="btn-container">
+                    <button class="btn btn-color-2" onclick="window.open('./assets/Lena_Ray_Resume.pdf')">Resume</button>
+                    <button class="btn btn-color-1" onclick="location.href='./#contact'">Contact Info</button>
+                </div>
+                <div id="socials-container">
+                    <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon-2" onclick="location.href='https://www.linkedin.com/in/lena-ray-ab296720b/'"/>
+                    <img src="./assets/github.png" alt="My Github profile" class="icon-1" onclick="location.href='https://github.com/lenaray/'"/>
+                </div>
+            </div>
+            <div class="section__pic-container">
+                <img src="./assets/ray_lena_security.jpg" alt="John Doe profile picture" class="profile-img" />
+            </div>
+        </div>
+    </section>
+    <section id="experience">
+        <h1 class="title">Experience</hi>
+        <div class="tab-buttons">
+            <button class="tab-button" onclick="openTab('frontend')">Frontend Development</button>
+            <button class="tab-button" onclick="openTab('backend')">Backend Development</button>
+        </div>
+        <div class="tab-container">
+            <div id="frontend" class="tab">Content 1</div>
+            <div id="backend" class="tab">Content 2</div>
+        </div>
+    </section>
+    <!-- <section id="about">
+        <div class="section-container">
+            <div class="about-details-container">
+                <div class="about-containers">
+                    <div class="details-container">
+                        <img src="./assets/experience.png" alt="experience icon" class="icon" />
+                        <h3>Experience</h3>
+                        <p>2+ years <br>Frontend Development</p>
+                    </div>
+                    <div class="details-container">
+                        <img src="./assets/education.png" alt="education icon" class="icon" />
+                        <h3>Education</h3>
+                        <p>B.S. in Computer Science and Engineering</p>
+                        <p>(in progress)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'"/>
+    </section> -->
+    <!-- <section id="experience">
+        <h1 class="title">Experience</h1>
+        <div class="experience-details-container">
+            <div class="about-containers">
+                <div class="details-container">
+                    <h2 class="experience-sub-title">Frontend Development</h2>
+                    <div class="article-container">
+                        <article>
+                            <img src="./assets/checkmark.png" alt="experience icon" class="icon" />
+                            <div>
+                                <h3>HTML</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="experience icon" class="icon" />
+                            <div>
+                                <h3>CSS</h3>
+                                <p>Experienced</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="experience icon" class="icon" />
+                            <div>
+                                <h3>SASS</h3>
+                                <p>Intermediate</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="experience icon" class="icon" />
+                            <div>
+                                <h3>JavaScript</h3>
+                                <p>Basic</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="experience icon" class="icon" />
+                            <div>
+                                <h3>TypeScript</h3>
+                                <p>Basic</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="experience icon" class="icon" />
+                            <div>
+                                <h3>Material UI</h3>
+                                <p>Intermediate</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="details-container">
+                    <h2 class="experience-sub-title">Backend Development</h2>
+                    <div class="article-container">
+                        <article>
+                            <img src="./assets/checkmark.png" alt="experience icon" class="icon" />
+                            <div>
+                                <h3>PostgreSQL</h3>
+                                <p>Basic</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="experience icon" class="icon" />
+                            <div>
+                                <h3>Node JS</h3>
+                                <p>Intermediate</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="experience icon" class="icon" />
+                            <div>
+                                <h3>Express JS</h3>
+                                <p>Intermediate</p>
+                            </div>
+                        </article>
+                        <article>
+                            <img src="./assets/checkmark.png" alt="experience icon" class="icon" />
+                            <div>
+                                <h3>Git</h3>
+                                <p>Intermediate</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'"/>
+    </section> -->
+    <section id="projects">
+        <h1 class="title">Projects</h1>
+        <div class="projects-grid">
+            <div class="project-tile" onclick="toggleProjectDetails(this)">
+                <img src="./assets/hitchhike_logo.png" alt="Project 1" class="project-img" />
+                <h2 class="project-title">HitchHike</h2>
+                <div class="project-details">
+                    <p class="description">A Swift-based iOS app that matches students in the same area going to similar destinations for carpool</p>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/rohanmalige/hitchhike'">
+                            Github
+                        </button>
+                        <!-- <button class="btn btn-color-2 project-btn" onclick="location.href='https://youtube.com/shorts/xztIW8qGFmc?si=bmFGN9tb5usZua6Q'">
+                            Live Demo
+                        </button> -->
+                    </div>
+                </div>
+            </div>
+            <div class="project-tile" onclick="toggleProjectDetails(this)">
+                <img src="./assets/stockhub_logo.png" alt="Project 2" class="project-img" />
+                <h2 class="project-title">StockHub</h2>
+                <div class="project-details">
+                    <p class="description">A React web app that allows users to search for real-time stock prices and graphical displays with a live news feed</p>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/lenaray/stockhub'">
+                            Github
+                        </button>
+                        <!-- <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
+                            Live Demo
+                        </button> -->
+                    </div>
+                </div>
+            </div>
+            <div class="project-tile" onclick="toggleProjectDetails(this)">
+                <img src="./assets/smartwatch.webp" alt="Project 3" class="project-img" />
+                <h2 class="project-title">Mock SmartWatch</h2>
+                <div class="project-details">
+                    <p class="description">Built on TI CC3200 Launchpad hardware and programmed in C, this smartwatch offers built-in games with gesture-based controls and supports Spotify streaming (ie song search, music controls)</p>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://lenaray.github.io/eec172-smartwatch/'">
+                            Github
+                        </button>
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://youtu.be/fS2qTuX20-0?si=5UB4yNlIGd18bHC5'">
+                            Live Demo
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="project-tile" onclick="toggleProjectDetails(this)">
+                <img src="./assets/tenacity_logo.png" alt="Project 4" class="project-img" />
+                <h2 class="project-title">TenaCity</h2>
+                <div class="project-details">
+                    <p class="description">A Swift-based health habit tracker app that integrates Apple Health API to retrieve live health data and monitor user-specified goals</p>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/s02singh/TenaCity/tree/main'">
+                            Github
+                        </button>
+                        <!-- <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
+                            Live Demo
+                        </button> -->
+                    </div>
+                </div>
+            </div>
+            <div class="project-tile" onclick="toggleProjectDetails(this)">
+                <img src="./assets/lingohero_logo2.png" alt="Project 5" class="project-img" />
+                <h2 class="project-title">LingoHero</h2>
+                <div class="project-details">
+                    <p class="description"><b>Lead Full-Stack Developer</b><br>A React Native app that gamifies language learning through a quest storyline that places a spotlight on different cultures</p>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/lenaray/lingohero'">
+                            Github
+                        </button>
+                        <!-- <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
+                            Live Demo
+                        </button> -->
+                    </div>
+                </div>
+            </div>
+            <div class="project-tile" onclick="toggleProjectDetails(this)">
+                <img src="./assets/virtual_teleprompter.png" alt="Project 6" class="project-img" />
+                <h2 class="project-title">Virtual Teleprompter</h2>
+                <div class="project-details">
+                    <p class="description">A Swift-based app that analyzes conversation audio and provides AI-generated suggested responses to enhance social communication for individuals with autism</p>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/lenaray/virtual-teleprompter'">
+                            Github
+                        </button>
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='https://docs.google.com/document/d/1HZRJHNSwSuvjhWUFCWiKpzhsQeFHYIpkuMEjgr78n50/edit?usp=sharing'">
+                            Research Report
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="project-tile" onclick="toggleProjectDetails(this)">
+                <img src="./assets/autovision.webp" alt="Project 7" class="project-img" />
+                <h2 class="project-title">AutoVision</h2>
+                <div class="project-details">
+                    <p class="description">An ML model for automatic recognition of car make and model, built in PyTorch and trained on 16,000 street surveillance for 94% accuracy</p>
+                    <div class="btn-container">
+                        <button class="btn btn-color-2 project-btn" onclick="location.href='./assets/ECS171_Final_Project.pdf'">
+                            Research Report
+                        </button>
+                        <!-- <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/'">
+                            Live Demo
+                        </button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <!-- <p class="section__text__p1">Get in Touch</p> -->
+        <h1 class="title">Contact Me</h1>
+        <div class="contact-info-upper-container">
+            <div class="contact-info-container">
+                <img src="./assets/email.png" alt="email icon" class="icon contact-icon email-icon" />
+                <p><a href="mailto:lenarayca@gmail.com">lenarayca@gmail.com</a></p>
+            </div>
+            <div class="contact-info-container">
+                <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+                <p><a href="https://www.linkedin.com/in/lena-ray-ab296720b/">LinkedIn</a></p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <nav>
+            <div class="nav-links-container">
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <p>Copyright &#169; 2024 Lena Ray. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
