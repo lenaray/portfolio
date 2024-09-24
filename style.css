@@ -366,8 +366,11 @@ section {
 }
 
 /* EXPERIENCE SECTION */
-.timeline {
+.experience {
     height: 90vh;
+}
+
+.timeline {
     position: relative;
     width: 80%;
     margin: 0 auto;
@@ -376,6 +379,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: all 0.4s ease-in-out;
 }
 
 .timeline-event {
@@ -389,6 +393,7 @@ section {
     transition: all 0.4s ease-in-out;
     overflow: hidden;
     margin-left: -0.5rem;
+    cursor: pointer;
 }
 
 .timeline-content {
@@ -416,6 +421,17 @@ section {
     background-color: #fff;
     border: 3px solid rgb(235, 202, 92);;
     border-radius: 50%;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #ddd;
+    transition: height 0.3s ease;
 }
 
 .timeline-node::before {
@@ -672,6 +688,7 @@ article .icon {
     width: 7rem;
     color: rgb(184, 184, 184);
     border-color: rgb(163, 163, 163);
+    margin-bottom: 1rem;
 }
 
 .project-details {
