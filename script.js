@@ -24,3 +24,40 @@ function toggleProjectDetails(tile) {
     });
     details.style.display = details.stytle.display === 'block' ? 'none' : 'block';
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    function changeNavOnScroll() {
+        let current = '';
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (pageYOffset >= sectionTop - sectionHeight / 3) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${current}`) {
+                link.classList.add('active');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', changeNavOnScroll);
+});
+
+window.addEventListener('scroll', function() {
+    const contactSection = document.getElementById('contact');
+    const sectionPosition = contactSection.getBoundingClientRect();
+    
+    if (sectionPosition.top <= window.innerHeight && sectionPosition.bottom >= 0) {
+        contactSection.classList.add('scrolled');
+    } else {
+        contactSection.classList.remove('scrolled');
+    }
+});
